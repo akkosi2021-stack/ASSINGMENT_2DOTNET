@@ -1,0 +1,61 @@
+using System;
+
+namespace Lab1_AccessModifiers
+{
+    class Student
+    {
+        // Access Modifier Members
+
+        public string Name;
+        private int Age;
+        protected string Department;
+        internal double CGPA;
+        protected internal string College;
+        private protected string Address;
+
+        // Method to set private/protected members
+        public void SetStudentDetails()
+        {
+            Name = "Asif";
+            Age = 20;
+            Department = "Computer Science";
+            CGPA = 8.5;
+            College = "ABC College";
+            Address = "Delhi";
+        }
+
+        // Display all members
+        public void Display()
+        {
+            Console.WriteLine("----- Student Details -----");
+            Console.WriteLine("Name: " + Name);
+            Console.WriteLine("Age: " + Age);
+            Console.WriteLine("Department: " + Department);
+            Console.WriteLine("CGPA: " + CGPA);
+            Console.WriteLine("College: " + College);
+            Console.WriteLine("Address: " + Address);
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Lab Question 1
+            Student student = new Student();
+
+            student.SetStudentDetails();
+            student.Display();
+
+            Console.WriteLine();
+
+            // Lab Question 2
+            TestStudent test = new TestStudent();
+
+            test.TestAccess();
+
+            Console.ReadLine();
+        }
+    }
+}
