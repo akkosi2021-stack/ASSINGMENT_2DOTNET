@@ -1,0 +1,57 @@
+// Lab Question 1: Access Modifiers within the Same Class Objective: Understand how different access modifiers work inside the same class. Task: 1. Create a Console Application named Lab1_AccessModifiers.  2. Create a class Student with the following members:  • public string Name  • private int Age  • protected string Department  • internal double CGPA  • protected internal string College  • private protected string Address  3. Create a public method Display() that prints all member values.  4. Access all members inside the same class and verify which members are accessible. 
+
+using System;
+
+namespace Lab1_AccessModifiers
+{
+    class Student
+    {
+        // Task 2: Create members
+
+        public string Name;
+        private int Age;
+        protected string Department;
+        internal double CGPA;
+        protected internal string College;
+        private protected string Address;
+
+
+        // Task 3 and Task 4
+
+        public void Display()
+        {
+            // Assign values to all members
+            Name = "Asif";
+            Age = 20;
+            Department = "Computer Science";
+            CGPA = 8.5;
+            College = "ABC College";
+            Address = "Delhi";
+
+            Console.WriteLine("----- Student Details -----");
+
+            // Accessing all members inside the same class
+            Console.WriteLine("Name: " + Name);
+            Console.WriteLine("Age: " + Age);
+            Console.WriteLine("Department: " + Department);
+            Console.WriteLine("CGPA: " + CGPA);
+            Console.WriteLine("College: " + College);
+            Console.WriteLine("Address: " + Address);
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create Student object
+            Student student = new Student();
+
+            // Call Display method
+            student.Display();
+
+            Console.ReadLine();
+        }
+    }
+}
