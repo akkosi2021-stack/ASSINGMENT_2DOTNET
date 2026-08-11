@@ -1,0 +1,51 @@
+using System;
+
+namespace Lab1_AccessModifiers
+{
+    class TestStudent
+    {
+        public void TestAccess()
+        {
+            // Task 3: Instantiate Student class
+            Student student = new Student();
+
+            Console.WriteLine("----- Access Modifier Test -----");
+
+            // Task 4: Try to access each member
+
+            // 1. PUBLIC
+            // Accessible from another class
+            student.Name = "Asif";
+            Console.WriteLine("Name: Accessible");
+
+            // 2. PRIVATE
+            // NOT accessible
+            // student.Age = 20;
+            Console.WriteLine("Age: Not Accessible");
+
+            // 3. PROTECTED
+            // NOT accessible because TestStudent
+            // is not derived from Student
+            // student.Department = "Computer Science";
+            Console.WriteLine("Department: Not Accessible");
+
+            // 4. INTERNAL
+            // Accessible because both classes
+            // are in the same assembly
+            student.CGPA = 8.5;
+            Console.WriteLine("CGPA: Accessible");
+
+            // 5. PROTECTED INTERNAL
+            // Accessible because both classes
+            // are in the same assembly
+            student.College = "ABC College";
+            Console.WriteLine("College: Accessible");
+
+            // 6. PRIVATE PROTECTED
+            // NOT accessible because TestStudent
+            // is not derived from Student
+            // student.Address = "Delhi";
+            Console.WriteLine("Address: Not Accessible");
+        }
+    }
+}
