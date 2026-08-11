@@ -1,0 +1,15 @@
+// Through Student object
+
+student.Name = "Rahul";
+Console.WriteLine("Name: " + student.Name);
+
+// student.Age = 21;              // ERROR
+// student.Department = "...";    // ERROR
+
+student.CGPA = 9.0;
+Console.WriteLine("CGPA: " + student.CGPA);
+
+student.College = "XYZ College";
+Console.WriteLine("College: " + student.College);
+
+// student.Address = "Mumbai";    // ERROR
