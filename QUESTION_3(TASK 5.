@@ -1,0 +1,48 @@
+using System;
+
+namespace Lab1_AccessModifiers
+{
+    class GraduateStudent : Student
+    {
+        public void ShowData()
+        {
+            // =========================================
+            // ACCESS THROUGH INHERITANCE
+            // =========================================
+
+            Name = "Asif";                 // public
+            Department = "Computer Science"; // protected
+            CGPA = 8.5;                    // internal
+            College = "ABC College";       // protected internal
+            Address = "Delhi";             // private protected
+
+            Console.WriteLine("Access Through Inheritance:");
+            Console.WriteLine("Name: Accessible");
+            Console.WriteLine("Age: Not Accessible");
+            Console.WriteLine("Department: Accessible");
+            Console.WriteLine("CGPA: Accessible");
+            Console.WriteLine("College: Accessible");
+            Console.WriteLine("Address: Accessible");
+
+
+            // =========================================
+            // ACCESS THROUGH STUDENT OBJECT
+            // =========================================
+
+            Student student = new Student();
+
+            student.Name = "Rahul";        // public
+            student.CGPA = 9.0;            // internal
+            student.College = "XYZ College"; // protected internal
+
+            Console.WriteLine();
+            Console.WriteLine("Access Through Student Object:");
+            Console.WriteLine("Name: Accessible");
+            Console.WriteLine("Age: Not Accessible");
+            Console.WriteLine("Department: Not Accessible");
+            Console.WriteLine("CGPA: Accessible");
+            Console.WriteLine("College: Accessible");
+            Console.WriteLine("Address: Not Accessible");
+        }
+    }
+}
