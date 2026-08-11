@@ -1,0 +1,8 @@
+using System;
+
+namespace Lab1_AccessModifiers
+{
+    class GraduateStudent : Student
+    {
+    }
+}
