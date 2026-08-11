@@ -1,0 +1,35 @@
+using System;
+
+namespace Lab1_AccessModifiers
+{
+    class GraduateStudent : Student
+    {
+        public void ShowData()
+        {
+            Console.WriteLine("----- Access Through Inheritance -----");
+
+            // 1. public
+            Name = "Asif";
+            Console.WriteLine("Name: " + Name);
+
+            // 2. private
+            // Age = 22;       // ERROR
+
+            // 3. protected
+            Department = "Computer Science";
+            Console.WriteLine("Department: " + Department);
+
+            // 4. internal
+            CGPA = 8.8;
+            Console.WriteLine("CGPA: " + CGPA);
+
+            // 5. protected internal
+            College = "ABC College";
+            Console.WriteLine("College: " + College);
+
+            // 6. private protected
+            Address = "Delhi";
+            Console.WriteLine("Address: " + Address);
+        }
+    }
+}
