@@ -1,0 +1,12 @@
+using System;
+
+namespace Lab1_AccessModifiers
+{
+    class GraduateStudent : Student
+    {
+        public void ShowData()
+        {
+            // Code will be added here
+        }
+    }
+}
